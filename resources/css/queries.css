@@ -110,6 +110,8 @@
         font-size: 100%;
     }
 
+    .mobile-nav-icon.menu {color: #fff;}
+
     .mobile-nav-icon {
         display: inline-block;
     }
