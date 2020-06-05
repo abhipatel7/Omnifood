@@ -13,7 +13,7 @@
     }
 
     // Set the recipient email address. Update this to YOUR desired email address.
-    $recipient = "<YOUR EMAIL HERE>";
+    $recipient = "abhipatel7420@gmail.com";
 
     // Set the email subject.
     $subject = "New contact from $name";
@@ -29,7 +29,7 @@
     // Send the email.
     mail($recipient, $subject, $email_content, $email_headers);
     
-    // Redirect to the index.html page with success code
+    // Redirect to the index.php page with success code
     header("Location: http://www.webdesigncourse.co/omnifood/index.php?success=1#form");
 
 ?>

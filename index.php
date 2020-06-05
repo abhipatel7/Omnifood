@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initital-scale=1.0">
     <title>Omnifood</title>
-    <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring health & affordable food to as many people as possible.">
+    <meta name="description"
+          content="Omnifood is a premium food delivery service with the mission to bring health & affordable food to as many people as possible.">
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+          rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
@@ -33,7 +35,9 @@
                 <li><a href="#cities">Our cities</a></li>
                 <li><a href="#plan">Sign up</a></li>
             </ul>
-            <a class="mobile-nav-icon menu js--nav-icon"><ion-icon name="menu"></ion-icon></a>
+            <a class="mobile-nav-icon menu js--nav-icon">
+                <ion-icon name="menu"></ion-icon>
+            </a>
         </div>
     </nav>
     <div class="hero-text-box">
@@ -373,13 +377,31 @@
     </div>
 </section>
 
-<section class="section-form">
+<section class="section-form" id="form">
     <div class="row">
         <h2>We're happy to hear from you</h2>
     </div>
     <div class="row">
         <form action="resources/mailer.php" method="post" class="contact-form">
             <div class="row">
+                <div class="row">
+
+                    <?php
+                    if ($_GET['success'] == 1) {
+                        echo "<div class=\"form-message success\">
+                        Thank you! Your message has beed sent.
+                        </div>";
+                    }
+
+                    if ($_GET['success'] == -1) {
+                        echo "<div class=\"form-message error\">
+                        Oops! Something went wrong. Please try again!
+                        </div>";
+                    }
+                    ?>
+
+                </div>
+
                 <div class="col span-1-of-3">
                     <label for="name">Name</label>
                 </div>
@@ -449,10 +471,18 @@
         </div>
         <div class="col span-1-of-2">
             <ul class="social-links">
-                <li><a href="#"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-twitter" class="twitter"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-google" class="google"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-instagram" class="instagram"></ion-icon></a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-facebook" class="facebook"></ion-icon>
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-twitter" class="twitter"></ion-icon>
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-google" class="google"></ion-icon>
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-instagram" class="instagram"></ion-icon>
+                    </a></li>
             </ul>
         </div>
     </div>
